@@ -12,6 +12,7 @@ pip install --upgrade torch torchvision torchaudio;  # for chris137, qa234
 pip install "lightning==2022.10.20" "protobuf<3.20"
 pip install --upgrade huggingface-hub flatbuffers click nose coverage typing-extensions;
 pip install --upgrade tokenizers fairscale deepspeed;
+pip install --upgrade flax;
 
 # clone & modify
 rm -rf lib && mkdir lib && cd lib
