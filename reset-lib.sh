@@ -1,18 +1,16 @@
 # create
-conda update -n base -c defaults conda;
-conda create --name CrossKorean-22.10 python=3.10 -y; conda activate CrossKorean-22.10;
+conda update -n base -c defaults conda
+conda create --name CrossKorean-22.10 python=3.10 -y
+conda activate CrossKorean-22.10
 
 # install
-pip install --upgrade pip packaging numpy matplotlib scipy pandas scikit-learn openpyxl tqdm tabulate SQLAlchemy pymongo;
-pip install --upgrade jupyter jupyterlab jupyter_nbextensions_configurator ipywidgets ipynbname jinja2;
-pip install --upgrade torch torchvision torchaudio;  # for chris137, qa234
-#pip install --upgrade torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116;
-#pip install --upgrade torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113;  # for qa77
-#pip install --upgrade torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu111;
+pip install --upgrade pip packaging numpy matplotlib scipy pandas scikit-learn openpyxl tqdm tabulate SQLAlchemy pymongo
+pip install --upgrade jupyter jupyterlab jupyter_nbextensions_configurator ipywidgets ipynbname jinja2
+pip install --upgrade torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+pip install --upgrade flax jax[cuda11_cudnn82] --find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 pip install "lightning==2022.10.20" "protobuf<3.20"
-pip install --upgrade huggingface-hub flatbuffers click nose coverage typing-extensions;
-pip install --upgrade tokenizers fairscale deepspeed;
-pip install --upgrade flax;
+pip install --upgrade huggingface-hub flatbuffers click nose coverage typing-extensions
+pip install --upgrade tokenizers fairscale deepspeed
 
 # clone & modify
 rm -rf lib && mkdir lib && cd lib
@@ -28,4 +26,3 @@ pip install -e datasets
 pip install -e evaluate
 pip install -e transformers
 cd ..
-
