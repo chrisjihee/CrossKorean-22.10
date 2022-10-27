@@ -22,7 +22,6 @@ __pycache__
 /data
 /data-*
 /encoded
-/note*/**/*.json
 /output
 /output-*
 /pretrained
